@@ -1,480 +1,151 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Balaji Design Hub | Digital Products & Design Services</title>
-
+<title>Balaji Design Hub</title>
 <style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:#f6f7fb;
-color:#222;
-line-height:1.6;
-}
-
-header{
-background:#111827;
-color:white;
-padding:18px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:10;
-}
-
-.logo{
-font-size:22px;
-font-weight:bold;
-}
-
-.logo span{
-color:#f59e0b;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:14px;
-font-size:14px;
-}
-
-.hero{
-background:linear-gradient(135deg,#111827,#1f2937);
-color:white;
-text-align:center;
-padding:70px 20px;
-}
-
-.hero h1{
-font-size:40px;
-margin-bottom:12px;
-}
-
-.hero h1 span{
-color:#f59e0b;
-}
-
-.hero p{
-font-size:19px;
-max-width:650px;
-margin:0 auto 25px;
-color:#e5e7eb;
-}
-
-.btn{
-display:inline-block;
-background:#f59e0b;
-color:#111827;
-padding:13px 24px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-margin:5px;
-}
-
-.btn.green{
-background:#22c55e;
-color:white;
-}
-
-section{
-padding:55px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-font-size:30px;
-margin-bottom:30px;
-}
-
-.section-title span{
-color:#f59e0b;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:14px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-text-align:center;
-}
-
-.card h3{
-margin-bottom:10px;
-font-size:20px;
-}
-
-.card p{
-color:#666;
-font-size:15px;
-}
-
-.icon{
-font-size:35px;
-margin-bottom:10px;
-}
-
-.products{
-background:#fff;
-}
-
-.price{
-font-size:25px;
-font-weight:bold;
-color:#f59e0b;
-margin:15px 0;
-}
-
-.about{
-background:#111827;
-color:white;
-max-width:none;
-text-align:center;
-}
-
-.about p{
-max-width:750px;
-margin:auto;
-color:#d1d5db;
-}
-
-.features .card{
-border-top:4px solid #f59e0b;
-}
-
-.steps .card{
-border-radius:12px;
-}
-
-.number{
-font-size:30px;
-font-weight:bold;
-color:#f59e0b;
-}
-
-.cta{
-text-align:center;
-background:#f59e0b;
-color:#111827;
-max-width:none;
-}
-
-.cta h2{
-font-size:30px;
-margin-bottom:10px;
-}
-
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:30px 20px;
-}
-
-footer p{
-color:#9ca3af;
-font-size:14px;
-margin-top:8px;
-}
-
-@media(max-width:700px){
-
-header{
-flex-direction:column;
-gap:12px;
-}
-
-nav a{
-margin:0 5px;
-font-size:12px;
-}
-
-.hero h1{
-font-size:31px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.section-title{
-font-size:26px;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f8fc;color:#1f2937}
+header{background:#111827;color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 10px #0002}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 18px;gap:15px}
+.logo{font-size:21px;font-weight:800;white-space:nowrap}
+.logo span{display:block;font-size:11px;font-weight:500;opacity:.75;margin-top:3px}
+nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+nav button{border:0;background:transparent;color:#fff;padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:700}
+nav button:hover,nav button.active{background:#fff;color:#111827}
+main{max-width:1100px;margin:auto;padding:28px 18px 50px}
+.tab{display:none;animation:fade .18s ease}
+.tab.active{display:block}
+@keyframes fade{from{opacity:.3;transform:translateY(4px)}to{opacity:1;transform:none}}
+.hero{text-align:center;background:#fff;border-radius:18px;padding:52px 20px;box-shadow:0 8px 28px #11182712}
+.hero h1{font-size:clamp(30px,6vw,50px);margin:0 0 12px}
+.hero p{font-size:18px;line-height:1.6;margin:8px auto;max-width:700px}
+.btn{display:inline-block;border:0;border-radius:10px;padding:12px 18px;background:#111827;color:#fff;text-decoration:none;font-weight:700;cursor:pointer;margin:8px 4px}
+.btn.alt{background:#e5e7eb;color:#111827}
+.section-title{text-align:center;margin:10px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#fff;border-radius:15px;padding:22px;box-shadow:0 5px 20px #11182710}
+.card h3{margin:8px 0 8px}
+.card p{margin:0;line-height:1.55;color:#4b5563}
+.icon{font-size:30px}
+.price{font-size:22px;font-weight:800;margin:12px 0}
+.list{line-height:1.9}
+.contact{text-align:center;background:#fff;border-radius:18px;padding:35px;box-shadow:0 8px 28px #11182712}
+footer{text-align:center;padding:24px;color:#6b7280;font-size:14px}
+@media(max-width:650px){
+ .nav{align-items:flex-start;flex-direction:column}
+ nav{width:100%;justify-content:center}
+ nav button{flex:1 1 auto}
+ main{padding:18px 12px 40px}
+ .hero{padding:38px 16px}
 }
 </style>
 </head>
-
 <body>
-
 <header>
-
-<div class="logo">
-Balaji <span>Design Hub</span>
-</div>
-
+<div class="nav">
+<div class="logo">Balaji Design Hub<span>Design • Create • Grow</span></div>
 <nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<button class="tab-btn active" data-tab="home">Home</button>
+<button class="tab-btn" data-tab="services">Services</button>
+<button class="tab-btn" data-tab="products">Products</button>
+<button class="tab-btn" data-tab="about">About</button>
+<button class="tab-btn" data-tab="contact">Contact</button>
 </nav>
-
+</div>
 </header>
 
-
-<section class="hero" id="home">
-
-<h1>Balaji <span>Design Hub</span></h1>
-
-<p>
-Professional Digital Solutions for Modern Businesses.
-Design • Create • Grow
-</p>
-
-<p>
-अपने Business को दें एक Professional Digital Identity.
-</p>
-
-<a href="#services" class="btn">Explore Services</a>
-
-<a href="#products" class="btn">Shop Products</a>
-
-</section>
-
-
-<section id="services">
-
-<h2 class="section-title">
-Our <span>Services</span>
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="icon">🎨</div>
-<h3>Logo Design</h3>
-<p>आपके Business के लिए Professional और Memorable Logo.</p>
+<main>
+<section id="home" class="tab active">
+<div class="hero">
+<h1>Balaji Design Hub</h1>
+<p><b>Professional Digital Solutions for Modern Businesses.</b></p>
+<p>अपने Business को दें एक Professional Digital Identity.</p>
+<button class="btn" onclick="showTab('services')">Explore Services</button>
+<button class="btn alt" onclick="showTab('products')">Shop Products</button>
 </div>
-
-<div class="card">
-<div class="icon">💼</div>
-<h3>Business Branding</h3>
-<p>Business Card, Letterhead और Complete Branding Solutions.</p>
-</div>
-
-<div class="card">
-<div class="icon">📢</div>
-<h3>Poster & Flyer</h3>
-<p>Marketing और Promotion के लिए आकर्षक Designs.</p>
-</div>
-
-<div class="card">
-<div class="icon">📱</div>
-<h3>Social Media Design</h3>
-<p>Instagram, Facebook और WhatsApp के लिए Professional Content.</p>
-</div>
-
-<div class="card">
-<div class="icon">🧾</div>
-<h3>GST & Invoice Templates</h3>
-<p>Business के लिए Ready-to-Use Professional Templates.</p>
-</div>
-
-<div class="card">
-<div class="icon">📄</div>
-<h3>Resume Design</h3>
-<p>Modern और Professional Resume तथा CV Templates.</p>
-</div>
-
-<div class="card">
-<div class="icon">🌐</div>
-<h3>Website Design</h3>
-<p>Small Businesses और Creators के लिए Modern Websites.</p>
-</div>
-
-<div class="card">
-<div class="icon">🤖</div>
-<h3>AI Digital Solutions</h3>
-<p>AI Prompts, eBooks, Printables और Digital Products.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="products" id="products">
-
-<h2 class="section-title">
-Premium <span>Digital Products</span>
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="icon">🧾</div>
-<h3>GST Invoice Template</h3>
-<p>Professional Ready-to-Use Business Invoice.</p>
-<div class="price">₹99</div>
-<a class="btn green" href="https://wa.me/917976081397">Buy Now</a>
-</div>
-
-<div class="card">
-<div class="icon">📱</div>
-<h3>Social Media Poster Pack</h3>
-<p>50+ Professional Editable Social Media Posters.</p>
-<div class="price">₹199</div>
-<a class="btn green" href="https://wa.me/917976081397">Buy Now</a>
-</div>
-
-<div class="card">
-<div class="icon">💳</div>
-<h3>Business Card Pack</h3>
-<p>Professional Editable Visiting Card Designs.</p>
-<div class="price">₹99</div>
-<a class="btn green" href="https://wa.me/917976081397">Buy Now</a>
-</div>
-
-<div class="card">
-<div class="icon">📄</div>
-<h3>Resume Template Pack</h3>
-<p>Modern Professional Resume Templates.</p>
-<div class="price">₹149</div>
-<a class="btn green" href="https://wa.me/917976081397">Buy Now</a>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="features">
-
-<h2 class="section-title">
-Why Choose <span>Us?</span>
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>✓ Professional Quality</h3>
-<p>Modern और High Quality Designs.</p>
-</div>
-
-<div class="card">
-<h3>✓ Affordable Pricing</h3>
-<p>छोटे Businesses के लिए उचित कीमत.</p>
-</div>
-
-<div class="card">
-<h3>✓ Fast Delivery</h3>
-<p>काम को समय पर पूरा करने का प्रयास.</p>
-</div>
-
-<div class="card">
-<h3>✓ AI Powered</h3>
-<p>Modern AI Technology का उपयोग.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="steps">
-
-<h2 class="section-title">
-How It <span>Works</span>
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="number">01</div>
-<h3>Choose</h3>
-<p>अपनी Service या Digital Product चुनें.</p>
-</div>
-
-<div class="card">
-<div class="number">02</div>
-<h3>Order</h3>
-<p>WhatsApp के माध्यम से Order करें.</p>
-</div>
-
-<div class="card">
-<div class="number">03</div>
-<h3>Receive</h3>
-<p>अपना Design या Digital Product प्राप्त करें.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="about" id="about">
-
-<h2 class="section-title">
-About <span>Balaji Design Hub</span>
-</h2>
-
-<p>
-Balaji Design Hub एक आधुनिक Digital Design और Digital Product Brand है।
-हम छोटे Businesses, Entrepreneurs, दुकानदारों और Creators को Professional Digital Identity बनाने में मदद करते हैं।
-हमारा उद्देश्य है Professional Quality को Affordable Price पर उपलब्ध कराना।
-</p>
-
-</section>
-
-
-<section class="cta" id="contact">
-
-<h2>Ready to Grow Your Business?</h2>
-
-<p>
-अपने Business को एक Professional Digital Identity दें।
-</p>
-
 <br>
-
-<a class="btn" href="https://wa.me/917976081397">
-Contact on WhatsApp
-</a>
-
+<div class="section-title"><h2>Why Choose Us?</h2></div>
+<div class="grid">
+<div class="card"><h3>✓ Professional Quality</h3><p>Modern और High Quality Designs.</p></div>
+<div class="card"><h3>✓ Affordable Pricing</h3><p>छोटे Businesses के लिए उचित कीमत.</p></div>
+<div class="card"><h3>✓ Fast Delivery</h3><p>काम को समय पर पूरा करने का प्रयास.</p></div>
+<div class="card"><h3>✓ AI Powered</h3><p>Modern AI Technology का उपयोग.</p></div>
+</div>
+<br>
+<div class="section-title"><h2>How It Works</h2></div>
+<div class="grid">
+<div class="card"><h3>01 — Choose</h3><p>अपनी Service या Digital Product चुनें.</p></div>
+<div class="card"><h3>02 — Order</h3><p>Order के लिए Contact करें.</p></div>
+<div class="card"><h3>03 — Receive</h3><p>अपना Design या Digital Product प्राप्त करें.</p></div>
+</div>
 </section>
 
+<section id="services" class="tab">
+<div class="section-title"><h2>Our Services</h2><p>यहाँ केवल Balaji Design Hub की design services हैं.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🎨</div><h3>Logo Design</h3><p>आपके Business के लिए Professional और Memorable Logo.</p></div>
+<div class="card"><div class="icon">💼</div><h3>Business Branding</h3><p>Business Card, Letterhead और Complete Branding Solutions.</p></div>
+<div class="card"><div class="icon">📢</div><h3>Poster & Flyer</h3><p>Marketing और Promotion के लिए आकर्षक Designs.</p></div>
+<div class="card"><div class="icon">📱</div><h3>Social Media Design</h3><p>Instagram, Facebook और WhatsApp के लिए Professional Content.</p></div>
+<div class="card"><div class="icon">🧾</div><h3>GST & Invoice Templates</h3><p>Business के लिए Ready-to-Use Professional Templates.</p></div>
+<div class="card"><div class="icon">📄</div><h3>Resume Design</h3><p>Modern और Professional Resume तथा CV Templates.</p></div>
+<div class="card"><div class="icon">🌐</div><h3>Website Design</h3><p>Small Businesses और Creators के लिए Modern Websites.</p></div>
+<div class="card"><div class="icon">🤖</div><h3>AI Digital Solutions</h3><p>AI Prompts, eBooks, Printables और Digital Products.</p></div>
+</div>
+<br><div class="contact"><h2>Service Enquiry</h2><p>अपनी जरूरत बताने के लिए Contact करें.</p><button class="btn" onclick="showTab('contact')">Contact / Enquiry</button></div>
+</section>
 
-<footer>
+<section id="products" class="tab">
+<div class="section-title"><h2>Premium Digital Products</h2><p>यहाँ केवल Digital Products की जानकारी है.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🧾</div><h3>GST Invoice Template</h3><p>Professional Ready-to-Use Business Invoice.</p><div class="price">₹99</div><button class="btn" onclick="showTab('contact')">Order</button></div>
+<div class="card"><div class="icon">📱</div><h3>Social Media Poster Pack</h3><p>50+ Professional Editable Social Media Posters.</p><div class="price">₹199</div><button class="btn" onclick="showTab('contact')">Order</button></div>
+<div class="card"><div class="icon">💳</div><h3>Business Card Pack</h3><p>Professional Editable Visiting Card Designs.</p><div class="price">₹99</div><button class="btn" onclick="showTab('contact')">Order</button></div>
+<div class="card"><div class="icon">📄</div><h3>Resume Template Pack</h3><p>Modern Professional Resume Templates.</p><div class="price">₹149</div><button class="btn" onclick="showTab('contact')">Order</button></div>
+</div>
+</section>
 
-<h3>Balaji Design Hub</h3>
+<section id="about" class="tab">
+<div class="section-title"><h2>About Balaji Design Hub</h2></div>
+<div class="card">
+<p class="list">Balaji Design Hub एक आधुनिक Digital Design और Digital Product Brand है। हम छोटे Businesses, Entrepreneurs, दुकानदारों और Creators को Professional Digital Identity बनाने में मदद करते हैं। हमारा उद्देश्य है Professional Quality को Affordable Price पर उपलब्ध कराना।</p>
+<h3>हमारा Approach</h3>
+<ul class="list">
+<li>Professional और practical digital solutions</li>
+<li>Small businesses के लिए affordable options</li>
+<li>Modern design और AI technology का उपयोग</li>
+<li>Simple और customer-friendly service</li>
+</ul>
+</div>
+</section>
 
-<p>Design • Create • Grow</p>
+<section id="contact" class="tab">
+<div class="contact">
+<h2>Contact Balaji Design Hub</h2>
+<p>Service enquiry या Product order के लिए संपर्क करें.</p>
+<p><b>WhatsApp / Order Enquiry</b></p>
+<p>अपना नाम, service/product और अपनी जरूरत लिखकर message भेजें.</p>
+<button class="btn" onclick="window.open('https://wa.me/','_blank')">Contact on WhatsApp</button>
+</div>
+</section>
+</main>
 
-<p>
-© 2026 Balaji Design Hub. All Rights Reserved.
-</p>
+<footer>© 2026 Balaji Design Hub. All Rights Reserved.</footer>
 
-</footer>
-
+<script>
+function showTab(id){
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelector('.tab-btn[data-tab="'+id+'"]').classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+ btn.addEventListener('click',()=>showTab(btn.dataset.tab));
+});
+</script>
 </body>
 </html>
